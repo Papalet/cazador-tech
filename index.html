@@ -69,9 +69,10 @@
             <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Filtrar por:</h3>
             <div class="flex flex-wrap gap-2">
                 <button class="bg-cyanaccent text-darkbg px-4 py-1.5 rounded-full text-sm font-bold shadow">Todos</button>
-                <button class="bg-cardbg hover:bg-gray-700 text-gray-300 px-4 py-1.5 rounded-full text-sm font-medium border border-gray-600">Procesadores</button>
-                <button class="bg-cardbg hover:bg-gray-700 text-gray-300 px-4 py-1.5 rounded-full text-sm font-medium border border-gray-600">Gráficas</button>
-                <button class="bg-cardbg hover:bg-gray-700 text-gray-300 px-4 py-1.5 rounded-full text-sm font-medium border border-gray-600">Periféricos</button>
+               <button class="bg-cardbg hover:bg-gray-700 text-gray-300 px-4 py-1.5 rounded-full text-sm border border-gray-600" onclick="filtrarProductos('procesadores')">Procesadores</button>
+<button class="bg-cardbg hover:bg-gray-700 text-gray-300 px-4 py-1.5 rounded-full text-sm border border-gray-600" onclick="filtrarProductos('graficas')">Gráficas</button>
+<button class="bg-cardbg hover:bg-gray-700 text-gray-300 px-4 py-1.5 rounded-full text-sm border border-gray-600" onclick="filtrarProductos('perifericos')">Periféricos</button>
+
             </div>
         </div>
 
@@ -79,12 +80,11 @@
         <div id="contenedor-ofertas" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             
             <!-- EJEMPLO DE TARJETA PROFESIONAL (ESTÁTICA, LUEGO SE BORRA) -->
-            <div class="product-card bg-cardbg border border-gray-700 rounded-xl overflow-hidden shadow-xl flex flex-col group">
-                <!-- Imagen del Producto (Placeholder) -->
-                <div class="relative bg-gray-700 h-48 flex items-center justify-center overflow-hidden">
-                    <img src="https://via.placeholder.com/300x200?text=GPU+RX6600" alt="Placa de Video" class="object-cover group-hover:scale-105 transition-transform duration-300">
-                    <!-- Badges -->
-                    <span class="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase">¡Destacado!</span>
+    <div class="relative bg-gray-700 h-48">
+        <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=500" alt="Placa de Video" class="w-full h-full object-cover">
+        <span class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">¡Destacado!</span>
+    </div>
+   
                 </div>
                 
                 <!-- Detalles -->
