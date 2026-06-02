@@ -63,7 +63,15 @@
 
     <!-- CONTENIDO PRINCIPAL -->
     <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
-        
+                <div class="mb-6">
+            <div class="relative">
+                <input type="text" id="buscador-productos" onkeyup="buscarProducto()" placeholder="¿Qué estás buscando, loco?..." class="w-full bg-cardbg text-gray-300 pl-10 pr-4 py-2.5 rounded-xl border border-gray-700 focus:outline-none focus:border-cyanaccent text-sm">
+                <div class="absolute left-3 top-3 text-gray-500">
+                    🔍
+                </div>
+            </div>
+        </div>
+
         <!-- 2. SISTEMA DE FILTROS/CATEGORÍAS -->
         <div class="mb-8 border-b border-gray-700 pb-4">
             <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Filtrar por:</h3>
@@ -137,6 +145,60 @@
             &copy; 2024 CazadorTech. Powered by NetHunter. Datos públicos recopilados legalmente.
         </div>
     </footer>
+    <script>
+    function buscarProducto() {
+        let texto = document.getElementById('buscador-productos').value.toLowerCase();
+        let tarjetas = document.querySelectorAll('.product-card');
+        
+        tarjetas.forEach(tarjeta => {
+            // Buscamos el título de la placa (el h2 o h3 de la tarjeta)
+            let titulo = tarjeta.querySelector('h2, h3').innerText.toLowerCase();
+            
+            // Si coincide lo que escribió con el título, se muestra; si no, se oculta
+            if (titulo.includes(texto)) {
+                tarjeta.style.display = "block";
+            } else {
+                tarjeta.style.display = "none";
+            }
+        });
+    }
+    </script>
+    <script>
+    function buscarProducto() {
+        let texto = document.getElementById('buscador-productos').value.toLowerCase();
+        let tarjetas = document.querySelectorAll('.product-card');
+        
+        tarjetas.forEach(tarjeta => {
+            // Buscamos el título de la placa (el h2 o h3 de la tarjeta)
+            let titulo = tarjeta.querySelector('h2, h3').innerText.toLowerCase();
+            
+            // Si coincide lo que escribió con el título, se muestra; si no, se oculta
+            if (titulo.includes(texto)) {
+                tarjeta.style.display = "block";
+            } else {
+                tarjeta.style.display = "none";
+            }
+        });
+    }
+    </script>
+    <script>
+    function buscarProducto() {
+        let texto = document.getElementById('buscador-productos').value.toLowerCase();
+        let tarjetas = document.querySelectorAll('.product-card');
+        
+        tarjetas.forEach(tarjeta => {
+            // Buscamos el título de la placa (el h2 o h3 de la tarjeta)
+            let titulo = tarjeta.querySelector('h2, h3').innerText.toLowerCase();
+            
+            // Si coincide lo que escribió con el título, se muestra; si no, se oculta
+            if (titulo.includes(texto)) {
+                tarjeta.style.display = "block";
+            } else {
+                tarjeta.style.display = "none";
+            }
+        });
+    }
+    </script>
 
 </body>
 </html>
