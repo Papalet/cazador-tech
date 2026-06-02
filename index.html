@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cazador Tech | Las Mejores Ofertas en Tecnología</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configuración de colores personalizados para Tailwind
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#111827',
+                        cardbg: '#1f2937',
+                        cyanaccent: '#22d3ee',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Un poco de CSS extra para animaciones suaves */
+        .product-card { transition: all 0.3s ease; }
+        .product-card:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body class="bg-darkbg text-gray-100 font-sans flex flex-col min-h-screen">
+
+    <!-- 1. NAVBAR PROFESIONAL -->
+    <nav class="bg-cardbg border-b border-gray-700 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-extrabold text-cyanaccent tracking-tighter">⚡ CAZADOR<span class="text-white">TECH</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Nuevas Ofertas</a>
+                        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">PC Gaming</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <!-- Botón menú móvil (básico) -->
+                    <button class="text-gray-400 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HÉROE / TITULAR (Más integrado) -->
+    <header class="bg-gray-900 py-10 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl font-extrabold text-white sm:text-5xl tracking-tight">Oportunidades Tech en Tiempo Real</h1>
+            <p class="mt-4 text-xl text-gray-400 max-w-2xl mx-auto">Nuestro algoritmo rastrea la web legalmente para traerte los mejores precios. ¡No pagues de más!</p>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        
+        <!-- 2. SISTEMA DE FILTROS/CATEGORÍAS -->
+        <div class="mb-8 border-b border-gray-700 pb-4">
+            <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Filtrar por:</h3>
+            <div class="flex flex-wrap gap-2">
+                <button class="bg-cyanaccent text-darkbg px-4 py-1.5 rounded-full text-sm font-bold shadow">Todos</button>
+                <button class="bg-cardbg hover:bg-gray-700 text-gray-300 px-4 py-1.5 rounded-full text-sm font-medium border border-gray-600">Procesadores</button>
+                <button class="bg-cardbg hover:bg-gray-700 text-gray-300 px-4 py-1.5 rounded-full text-sm font-medium border border-gray-600">Gráficas</button>
+                <button class="bg-cardbg hover:bg-gray-700 text-gray-300 px-4 py-1.5 rounded-full text-sm font-medium border border-gray-600">Periféricos</button>
+            </div>
+        </div>
+
+        <!-- CONTENEDOR DE PRODUCTOS -->
+        <div id="contenedor-ofertas" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            
+            <!-- EJEMPLO DE TARJETA PROFESIONAL (ESTÁTICA, LUEGO SE BORRA) -->
+            <div class="product-card bg-cardbg border border-gray-700 rounded-xl overflow-hidden shadow-xl flex flex-col group">
+                <!-- Imagen del Producto (Placeholder) -->
+                <div class="relative bg-gray-700 h-48 flex items-center justify-center overflow-hidden">
+                    <img src="https://via.placeholder.com/300x200?text=GPU+RX6600" alt="Placa de Video" class="object-cover group-hover:scale-105 transition-transform duration-300">
+                    <!-- Badges -->
+                    <span class="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase">¡Destacado!</span>
+                </div>
+                
+                <!-- Detalles -->
+                <div class="p-5 flex-grow flex flex-col">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <p class="text-xs text-cyanaccent font-medium uppercase tracking-wider">Gráficas</p>
+                            <h2 class="text-lg font-bold text-white leading-tight mt-1">Placa de Video RX 6600 XT 8GB GDDR6</h2>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4 line-clamp-2">Rendimiento increíble para 1080p gaming. Stock limitado en tienda oficial.</p>
+                    
+                    <!-- Precio y Botón (Al final de la tarjeta) -->
+                    <div class="mt-auto pt-4 border-t border-gray-700 flex items-center justify-between gap-3">
+                        <div>
+                            <p class="text-xs text-gray-500 line-through">$380.000</p>
+                            <p class="text-2xl font-extrabold text-green-400">$350.000</p>
+                        </div>
+                        <a href="#" target="_blank" class="bg-cyanaccent hover:bg-white text-darkbg font-bold px-5 py-3 rounded-lg text-sm transition duration-150 flex items-center gap-2 whitespace-nowrap">
+                            Ver Oferta
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- FIN EJEMPLO ESTÁTICO -->
+
+        </div>
+    </main>
+
+    <!-- 5. FOOTER PROFESIONAL Y LEGAL -->
+    <footer class="bg-cardbg border-t border-gray-700 mt-12 py-10 text-gray-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-3">
+                <span class="text-xl font-extrabold text-cyanaccent tracking-tighter">⚡ CAZADOR<span class="text-white">TECH</span></span>
+                <p class="text-xs">Tu portal de confianza para encontrar hardware al mejor precio. Actualizado automáticamente.</p>
+            </div>
+            <div class="flex flex-col space-y-2">
+                <h4 class="font-bold text-white mb-2">Enlaces Útiles</h4>
+                <a href="#" class="hover:text-cyanaccent">Aviso Legal</a>
+                <a href="#" class="hover:text-cyanaccent">Términos de Servicio</a>
+                <a href="#" class="hover:text-cyanaccent">Contacto</a>
+            </div>
+            <div class="border border-yellow-700 bg-yellow-950 p-4 rounded-lg text-xs text-yellow-200">
+                <h4 class="font-bold mb-1 flex items-center gap-1.5"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Divulgación de Afiliados</h4>
+                Este sitio participa en programas de afiliados (como Mercado Libre). Si compras a través de nuestros enlaces, podríamos recibir una pequeña comisión sin costo adicional para ti. Esto nos ayuda a mantener los servidores. ¡Gracias!
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 text-center mt-8 pt-6 border-t border-gray-800 text-xs text-gray-600">
+            &copy; 2024 CazadorTech. Powered by NetHunter. Datos públicos recopilados legalmente.
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
